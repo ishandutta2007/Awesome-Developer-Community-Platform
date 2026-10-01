@@ -1,0 +1,114 @@
+<svg fill="none" viewBox="0 0 1200 320" width="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="50%" stop-color="#161b22"/>
+      <stop offset="100%" stop-color="#0a0d12"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="50%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.0"/>
+    </linearGradient>
+
+    <style>
+      .title { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 800; font-size: 42px; fill: #ffffff; }
+      .subtitle { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 500; font-size: 20px; fill: #94a3b8; }
+      .badge-text { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 600; font-size: 13px; fill: #38bdf8; }
+      
+      /* Dynamic / Animated elements behind text */
+      @keyframes floatSlow {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-12px) rotate(2deg); }
+      }
+      @keyframes floatFast {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-18px); }
+      }
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.2; transform: scale(1); }
+        50% { opacity: 0.4; transform: scale(1.08); }
+      }
+      @keyframes dashMove {
+        0% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: -100; }
+      }
+      
+      .animated-bg-card { animation: floatSlow 8s ease-in-out infinite; transform-origin: center; }
+      .animated-node { animation: floatFast 6s ease-in-out infinite; transform-origin: center; }
+      .animated-glow { animation: pulseGlow 5s ease-in-out infinite; transform-origin: center; }
+      .animated-line { stroke-dasharray: 8 8; animation: dashMove 20s linear infinite; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="320" rx="16" fill="url(#bgGrad)" stroke="#30363d" stroke-width="2"/>
+
+  <!-- Dynamic Glowing Orbs in Background -->
+  <circle cx="1000" cy="80" r="140" fill="url(#glowGrad)" class="animated-glow"/>
+  <circle cx="200" cy="240" r="120" fill="url(#glowGrad)" class="animated-glow" style="animation-delay: -2.5s;"/>
+
+  <!-- Background Animated Network / Dynamic Graph Elements (Background Layer) -->
+  <g stroke="#334155" stroke-width="1.5" class="animated-line" opacity="0.6">
+    <line x1="150" y1="260" x2="350" y2="210" />
+    <line x1="350" y1="210" x2="550" y2="250" />
+    <line x1="800" y1="80" x2="980" y2="140" />
+    <line x1="980" y1="140" x2="1100" y2="70" />
+  </g>
+
+  <!-- Background Floating Decorative Cards / Badges (Kept away/behind title area) -->
+  <g class="animated-bg-card" opacity="0.4">
+    <rect x="920" y="50" width="180" height="60" rx="12" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <circle cx="950" cy="80" r="14" fill="#3b82f6"/>
+    <rect x="975" y="70" width="90" height="8" rx="4" fill="#64748b"/>
+    <rect x="975" y="84" width="60" height="6" rx="3" fill="#475569"/>
+  </g>
+  
+  <g class="animated-bg-card" style="animation-delay: -4s;" opacity="0.35">
+    <rect x="860" y="160" width="220" height="70" rx="12" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <circle cx="895" cy="195" r="16" fill="#10b981"/>
+    <rect x="925" y="183" width="120" height="10" rx="5" fill="#64748b"/>
+    <rect x="925" y="200" width="80" height="8" rx="4" fill="#475569"/>
+  </g>
+
+  <g class="animated-node" opacity="0.5">
+    <circle cx="150" cy="260" r="8" fill="#8b5cf6"/>
+    <circle cx="350" cy="210" r="6" fill="#06b6d4"/>
+    <circle cx="550" cy="250" r="7" fill="#ec4899"/>
+  </g>
+
+  <!-- Decorative Top Border Gradient Accent -->
+  <rect x="0" y="0" width="1200" height="6" fill="url(#accentGrad)" rx="3"/>
+
+  <!-- Foreground Foreground Content (Title & Subtitle - Crisp and Unobscured) -->
+  <g transform="translate(80, 0)">
+    <!-- Category Pill -->
+    <rect x="0" y="52" width="240" height="32" rx="16" fill="#1e1b4b" stroke="#6366f1" stroke-width="1.5"/>
+    <text x="120" y="73" text-anchor="middle" class="badge-text">⚡ CURATED ECOSYSTEM</text>
+
+    <!-- Main Title -->
+    <text x="0" y="140" class="title">Awesome Developer Community Platform</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="185" class="subtitle">Top SaaS &amp; Open-Source Tools for Forums, Real-Time Chat &amp; Community Intelligence</text>
+
+    <!-- Stat Highlights Pills -->
+    <g transform="translate(0, 220)">
+      <!-- Pill 1 -->
+      <rect x="0" y="0" width="160" height="36" rx="8" fill="#1e293b" stroke="#334155"/>
+      <text x="16" y="23" font-family="system-ui" font-size="13" font-weight="600" fill="#a7f3d0">💬 Discussion Forums</text>
+      
+      <!-- Pill 2 -->
+      <rect x="175" y="0" width="160" height="36" rx="8" fill="#1e293b" stroke="#334155"/>
+      <text x="191" y="23" font-family="system-ui" font-size="13" font-weight="600" fill="#bae6fd">⚡ Real-Time Chat</text>
+
+      <!-- Pill 3 -->
+      <rect x="350" y="0" width="180" height="36" rx="8" fill="#1e293b" stroke="#334155"/>
+      <text x="366" y="23" font-family="system-ui" font-size="13" font-weight="600" fill="#fef08a">🧠 Community Data &amp; Q&amp;A</text>
+    </g>
+  </g>
+</svg>
