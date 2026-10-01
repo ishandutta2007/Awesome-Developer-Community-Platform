@@ -62,7 +62,7 @@ Below is a curated comparison of leading SaaS developer community platforms, ord
 
 ## 🔓 Open-Source Community GitHub Projects
 
-Explore production-grade open-source community software. Each repository includes a link to its real-time star count and stargazers page, sorted by star count in descending order.
+Explore production-grade open-source community software. Each repository includes a link to its real-time Stars_Count and stargazers page, sorted by Stars_Count in descending order.
 
 ### 💬 Forum & Discussion Platforms
 
@@ -141,7 +141,7 @@ Contributions are always welcome! 🛠️
 1. **Fork** the repository.
 2. **Create** a new feature branch (`git checkout -b feature/add-new-platform`).
 3. **Add** your entry to `README.md` following the tabular or categorized format.
-4. **Verify** pricing, free tier limits, star counts, and licensing.
+4. **Verify** pricing, free tier limits, Stars_Counts, and licensing.
 5. **Submit** a Pull Request with a short summary of the additions.
 
 ---
